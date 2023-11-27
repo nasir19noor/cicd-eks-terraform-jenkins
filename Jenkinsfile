@@ -2,9 +2,9 @@
 pipeline {
     agent any
 	environment {
-	    AWS_ACCESS_KEY_ID = credentials('AWS_SECRET_ACCESS_KEY_CC')
-		AWS_SECRET_ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID_CC')
-		AWS_DEFAULT_REGION = "ap-southeast-1"
+	    AWS_ACCESS_KEY_ID = credentials('AWS_SECRET_ACCESS_KEY')
+            AWS_SECRET_ACCESS_KEY = credentials('AWS_ACCESS_KEY_ID')
+	    AWS_DEFAULT_REGION = "ap-southeast-1"
 	}
 	stages{ 
 	    stage("create an EKS Cluster") {
